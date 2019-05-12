@@ -13,7 +13,7 @@ html{
 }
 
 body{
-    background: #ccc;
+    background-image:url(../images/background.png);
     margin: 30px 50px;
     line-height: 1.4;
 }
@@ -45,24 +45,28 @@ img{
 }
 
 .main-nav a{
-    background: var(--primary);
+    background:#D32E2B;
     display: block;
     text-decoration: none;
     padding: 0;
     text-align: center;
-    color: var(--dark);
+    color: var(--light);
     text-transform: uppercase;
     font-size: 1.1rem;
     box-shadow: var(--shadow);
 }
 
 .main-nav a:hover{
-    background: var(--dark);
-    color: var(--light);
+    background: var(--light);
+    color:#D32E2B;
 }
 
 /*Top Container */
 .top-container{
+    background-image: url(../images/Fire-Slides.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: grid;
     grid-gap: 20px;
     grid-template-areas: 
@@ -71,22 +75,20 @@ img{
 
 /* Showcase */
 .showcase{
-    grid-area: showcase;
     min-height: 400px;
-    background: url(/assets/images/background.png);
     background-size: cover;
     background-position: center;
-    padding:3rem;
+    padding:2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    box-shadow: var(--shadow);
 }
 
 .showcase h1{
+    font-family: fantasy;
     font-size: 4rem;
-    margin-bottom: 0;
+    margin-bottom:0;
     color: var(--light);
 }
 
@@ -97,14 +99,18 @@ img{
 }
 
 .profile-pic{
+    color: var(--light);
+    font-size: 1rem;
     grid-area: profile-pic;
-    background: var(--primary);
     display: grid;
     align-items: center;
     justify-items:center;
-    box-shadow: var(--shadow);
     padding:1.5rem;
 }
+ .biography h2{
+    font-family: fantasy;
+    font-size: 2rem;
+    }
 
 /* Boxes */
 .boxes{
@@ -114,17 +120,30 @@ img{
 }
 
 .box{
-    background: var(--primary);
+    color: var(--light);
+    background: url(../images/Fire-Slides.jpg);
     text-align: center;
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
 }
+.box h3{
+        font-family: fantasy;
+    }
 .box img{
     width: 50%;
 }
-.box h4{
+
+.box h3{
     font-weight:inherit;
     font-size-adjust: auto;
+    text-align: left;
+    margin: 
+}
+.box h4{
+    margin: 0;
+    font-weight:inherit;
+    font-size-adjust: auto;
+    text-align: left;
 }
 .box p{
     text-align:left;
@@ -132,8 +151,11 @@ img{
 
 /* Infor */
 .info{
-    background: var(--primary);
+    background-image: url(../images/Fire-Slides.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: var(--shadow);
+    color: var(--light);
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(2,1fr);
@@ -142,8 +164,8 @@ img{
 
 /*Footer*/
 footer{
-    margin-top: 2rem;
-    background: var(--dark);
+    background-image: url(../images/fire.jpeg);
+    margin-top: 1rem;
     color: var(--light);
     text-align: center;
     padding: 1rem;
@@ -151,16 +173,21 @@ footer{
 
 /*iPad*/
 @media(max-width:768px){
+    .showcase h1{
+        font-size: 3.5rem;
+    }
     .top-container{
         grid-template-areas: 
-            'profile-pic profile-pic'
-            'showcase shocase';
-    }
-    .showcase h1{
-        font-size: 2.5rem;
+            'profile-pic'
+            'showcase';
     }
     .main-nav ul{
         grid-template-columns: 1fr;
+    }
+    .profile-pic{
+        font-size: 1.2rem;
+        padding:6rem;
+        margin: 0;
     }
     .info{
         grid-template-columns: 1fr;
@@ -174,6 +201,10 @@ footer{
 
 /* iPhoneX */
 @media(max-width: 375px){
+    .main-nav ul{
+        padding: 0;
+        margin: 0;
+    }
     .showcase{
     padding:1rem;
 }
@@ -181,6 +212,12 @@ footer{
         grid-template-areas: 
             'profile-pic'
             'showcase';
+    }
+    
+     .profile-pic{
+        font-size: 1.2rem;
+        padding:1rem;
+        margin: 0;
     }
     
     .showcase h1{
@@ -201,6 +238,9 @@ footer{
     .info{
         padding: 1rem;
     }
+    .info{
+        padding: .5rem;
+    }
     .biography h2{
         margin: 0;
         padding: 0;
@@ -214,7 +254,10 @@ footer{
     grid-gap: 20px;
     grid-template-columns:1fr;
 }
-    
+    .box {
+        padding:1rem;   
+    }
+
 }
 
 
